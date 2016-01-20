@@ -1,0 +1,17 @@
+<h1>Receptek</h1>
+{{#link-to "new"}}
+Új hozzáadása
+{{/link-to}}
+<table class="table">
+  {{#each model as |recipe|}}
+    <tr><th>{{recipe.name}}</th>
+    <td>{{#link-to "recept" recipe.id}}
+        <button class="btn btn-default">
+	Megnéz
+        </button>
+        {{/link-to}}
+    </td></tr>
+  {{/each}}
+</table>
+
+{{outlet}}
